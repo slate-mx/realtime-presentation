@@ -74,7 +74,7 @@ $codeFont: 'Fira Code', $systemFontsMono;
 // https://spec.draculatheme.com/
 :root {
   --r-bold-color: #{$pink};
-  --r-italic-color: #{$green};
+  --r-italic-color: #{$pink};
   --r-inline-code-color: #{$inlineCodeColor};
   --r-list-bullet-color: #{$listBulletColor};
 }
@@ -125,8 +125,4 @@ $codeFont: 'Fira Code', $systemFontsMono;
 
 .reveal ol li {
   counter-increment: li;
-}
-
-.text-comment {
-  color: $comment;
 }

@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="dist/theme/slate.css" />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="plugin/highlight/dracula.min.css" />
+    <!-- <link rel="stylesheet" href="plugin/highlight/monokai.css" /> -->
 
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <!-- <link href="https://unpkg.com/tailwindcss@^2.0.1/dist/tailwind.min.css" rel="stylesheet"> -->
@@ -51,19 +52,18 @@
           data-background-repeat="no-repeat"
         >
           <section>
-            <div class="flex flex-col items-center gap-20">
-              <div class="flex flex-col">
-                <div class="w-full flex justify-between items-end">
-                  <img src="images/avatars.png" width="160" />
-                  <img src="images/cursor.png" width="120" />
-                </div>
-                <h2 class="!text-4xl">Users today are used to the realtime experience</h2>
-              </div>
-              <div class="flex items-center justify-center gap-20">
-                <img src="images/figma.svg" width="100" />
-                <img src="images/notion.svg" width="100" />
-                <img src="images/google-docs.svg" width="100" />
-              </div>
+            <h2 class="r-text-fit">Collaboration 101</h2>
+          </section>
+          <section>
+            <div class="w-full flex justify-between items-end">
+              <img src="images/avatars.png" width="160" />
+              <img src="images/cursor.png" width="120" />
+            </div>
+            <h2 class="r-fit-text !mb-20">Users today are used to the realtime experience</h2>
+            <div class="flex items-center justify-center gap-20">
+              <img src="images/figma.svg" width="100" />
+              <img src="images/notion.svg" width="100" />
+              <img src="images/google-docs.svg" width="100" />
             </div>
           </section>
           <section>
@@ -92,19 +92,88 @@
           data-background-size="cover"
           data-background-repeat="no-repeat"
         >
+          <section><h2 class="r-text-fit">Examples</h2></section>
           <section>
-            <h2 class="!text-xl !text-slate-500">What is realtime, show the demos</h2>
+            <h2 class="!text-2xl !my-8"><strong>Example:</strong> Todo App</h2>
+            <div class="flex gap-5 r-stretch">
+              <iframe
+                data-src="https://inrealtime-todo.vercel.app"
+                data-preload
+                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+              ></iframe>
+              <iframe
+                data-src="https://inrealtime-todo.vercel.app"
+                data-preload
+                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+              ></iframe>
+            </div>
           </section>
           <section>
-            <h2 class="!text-xl !text-slate-500">Show simple code example usage</h2>
+            <h2 class="!text-2xl !my-8"><strong>Example:</strong> Block Editor</h2>
+            <div class="flex gap-5 r-stretch">
+              <iframe
+                data-src="https://realtime-block-editor.vercel.app"
+                data-preload
+                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+              ></iframe>
+              <iframe
+                data-src="https://realtime-block-editor.vercel.app"
+                data-preload
+                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+              ></iframe>
+            </div>
           </section>
           <section>
-            <h2 class="!text-xl !text-slate-500">
-              Show web app, how to create a project and manage settings
+            <h2 class="!text-2xl">Read & write data</h2>
+            <pre>
+							<code data-trim data-line-numbers="3-4|6-12" class="language-tsx">
+								import { useStore, usePatch } from '@/realtime.config'
+
+								const todos = useStore((root) => root.todos)
+								// [{ label: 'Find out what "goon" means', checked: false }]
+
+								const patch = usePatch()
+
+								patch((root) => {
+									root.todos.push({
+										label: 'Take the cat out for a walk',
+									})
+								})
+							</code>
+						</pre>
+          </section>
+        </section>
+        <section
+          data-auto-animate
+          data-background-image="images/tv-bg.svg"
+          data-background-size="cover"
+          data-background-repeat="no-repeat"
+        >
+          <section>
+            <h2 class="r-text-fit">How to realtime</h2>
+          </section>
+          <section>
+            <h2 class="r-fit-text">
+              Web app: <a href="https://inrealtime.app/" target="_blank">inrealtime.app</a>
             </h2>
           </section>
           <section>
-            <h2 class="!text-xl !text-slate-500">Show npm package installation and usage</h2>
+            <h2 class="r-fit-text">
+              Npm pack:
+              <a href="https://www.npmjs.com/package/@inrealtime/react" target="_blank"
+                >@inrealtime/react</a
+              >
+            </h2>
+          </section>
+          <section>
+            <pre>
+							<code data-trim class="language-powershell">
+								yarn add @inrealtime/react
+							</code>
+						</pre>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">Setup in code</h2>
           </section>
         </section>
         <section
@@ -136,7 +205,6 @@
       // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
-
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       })
