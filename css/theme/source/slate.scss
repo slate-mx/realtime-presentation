@@ -1,0 +1,136 @@
+/**
+ * Dracula Dark theme for reveal.js.
+ * Based on https://draculatheme.com
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(./fonts/roobert/roobert.css);
+
+$systemFontsMono: Menlo,
+				  Consolas,
+				  Monaco,
+				  Liberation Mono,
+				  Lucida Console,
+				  monospace;
+
+/**
+ * Dracula colors by Zeno Rocha
+ * https://draculatheme.com/contribute
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+body:after {
+	content: "";
+	position: fixed;
+	display: block;
+	bottom: 1.5em;
+	left: 1em;
+	width: 10%;
+	min-width: 100px;
+	aspect-ratio: 16/9;
+	background-image: url(/images/slate-logo.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+$background: #020617;
+$foreground: #f8fafc;
+$selection: #1e293b;
+$comment: #64748b;
+$red: #ef4444;
+$orange: #f97316;
+$yellow: #eab308;
+$green: #14b8a6;
+$purple: #a855f7;
+$cyan: #06b6d4;
+$pink: #ec4899;
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $foreground;
+$headingColor: $pink;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: $background;
+$linkColor: $pink;
+$linkColorHover: $green;
+$selectionBackgroundColor: $selection;
+$inlineCodeColor: $green;
+$listBulletColor: $pink;
+
+$codeFont: "Fira Code", $systemFontsMono;
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color($background);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Define additional color effects based on Dracula spec
+// https://spec.draculatheme.com/
+:root {
+	--r-bold-color: #{$pink};
+	--r-italic-color: #{$green};
+	--r-inline-code-color: #{$inlineCodeColor};
+	--r-list-bullet-color: #{$listBulletColor};
+}
+
+.reveal strong, .reveal b {
+	color: var(--r-bold-color);
+}
+
+.reveal em, .reveal i, .reveal blockquote {
+	color: var(--r-italic-color);
+}
+
+.reveal code {
+	color: var(--r-inline-code-color);
+}
+
+// Dracula colored list bullets and numbers
+.reveal ul {
+	list-style: none;
+}
+
+.reveal ul li::before {
+	content: "•";
+	color: var(--r-list-bullet-color);
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em
+}
+
+.reveal ol {
+	list-style: none;
+	counter-reset: li;
+}
+
+.reveal ol li::before {
+	content: counter(li) ".";
+	color: var(--r-list-bullet-color);
+	display: inline-block;
+	width: 2em;
+
+	margin-left: -2.5em;
+    margin-right: 0.5em;
+	text-align: right;
+}
+
+.reveal ol li {
+	counter-increment: li
+}
+
+.text-comment {
+	color: $comment;
+}

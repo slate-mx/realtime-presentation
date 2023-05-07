@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Slate presentation</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/slate.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown data-background-image="/images/tv-bg.svg" data-background-size="cover" data-background-repeat="no-repeat">
+					<!-- <img src="/images/realtime-logo.svg" width="540" /> -->
+					<!-- <h4 style="font-weight: bold;">Realtime collaboration with ease</h4> -->
+					<textarea data-template>
+						<img src="/images/realtime-logo.svg" width="540" /><br />
+						<p class="text-comment">realtime collaboration with ease</p>
+						---
+						## Slide 2
+						---
+						## Slide 3
+					</textarea>
+				</section>
+				<section><section>Slide 4.1</section><section>Slide 4.2</section></section>
+				<section>Slide 5</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
