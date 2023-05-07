@@ -1,54 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Slate presentation</title>
+    <title>Slate presentation</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/slate.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/slate.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
 
-		<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-		<!-- <link href="https://unpkg.com/tailwindcss@^2.0.1/dist/tailwind.min.css" rel="stylesheet"> -->
-		<script src="https://cdn.tailwindcss.com"></script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-auto-animate data-background-image="images/tv-bg.svg" data-background-size="cover" data-background-repeat="no-repeat">					
-					<div class="flex justify-center">
-						<img src="images/realtime-logo.svg" width="540" />
-					</div>
-					<p class="text-slate-500">realtime collaboration with ease</p>
-					<div>
-						
-					</div>
-				</section>
-				<section data-auto-animate data-background-image="images/tv-bg.svg" data-background-size="cover" data-background-repeat="no-repeat">					
-					<!-- <img src="images/realtime-logo.svg" width="100px"/> -->
-				</section>
-			</div>
-		</div>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <!-- <link href="https://unpkg.com/tailwindcss@^2.0.1/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-auto-animate
+          data-background-image="images/tv-bg.svg"
+          data-background-size="cover"
+          data-background-repeat="no-repeat"
+        >
+          <div class="flex justify-center">
+            <img src="images/realtime-logo.svg" width="540" />
+          </div>
+          <h1 class="!text-3xl italic">realtime collaboration with ease</h1>
+          <div class="w-full flex items-center justify-center gap-4 mt-16">
+            <div
+              class="h-16 w-16 rounded-full overflow-hidden bg-[url('images/birkir.png')] bg-cover bg-center ring-2 ring-slate-500 ring-offset-2 ring-offset-slate-950"
+            ></div>
+            <div class="text-xl text-slate-500 flex flex-col items-start gap-0.5">
+              <span class="font-bold">👋 Birkir Örn Karlsson</span>
+              <span>🏢 Slate co-founder & CPO</span>
+            </div>
+          </div>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section
+          data-auto-animate
+          data-background-image="images/tv-bg.svg"
+          data-background-size="cover"
+          data-background-repeat="no-repeat"
+        >
+          <section>
+            <div class="flex flex-col items-center gap-20">
+              <div class="flex flex-col">
+                <div class="w-full flex justify-between items-end">
+                  <img src="images/avatars.png" width="160" />
+                  <img src="images/cursor.png" width="120" />
+                </div>
+                <h2 class="!text-4xl">Users today are used to the realtime experience</h2>
+              </div>
+              <div class="flex items-center justify-center gap-20">
+                <img src="images/figma.svg" width="100" />
+                <img src="images/notion.svg" width="100" />
+                <img src="images/google-docs.svg" width="100" />
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">
+              Realtime was built because we needed a good product for Slate
+            </h2>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">Who has worked with websockets?</h2>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">
+              It's hard to simply "Add realtime later on as a feature"
+            </h2>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">
+              CRDTs, Figma spent insane amount of time rewriting everything for their multiplayer
+              functionality
+            </h2>
+          </section>
+        </section>
+        <section
+          data-auto-animate
+          data-background-image="images/tv-bg.svg"
+          data-background-size="cover"
+          data-background-repeat="no-repeat"
+        >
+          <section>
+            <h2 class="!text-xl !text-slate-500">What is realtime, show the demos</h2>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">Show simple code example usage</h2>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">
+              Show web app, how to create a project and manage settings
+            </h2>
+          </section>
+          <section>
+            <h2 class="!text-xl !text-slate-500">Show npm package installation and usage</h2>
+          </section>
+        </section>
+        <section
+          data-auto-animate
+          data-background-image="images/tv-bg.svg"
+          data-background-size="cover"
+          data-background-repeat="no-repeat"
+        >
+          <h2 class="!text-xl !text-slate-500">Questions and tech?</h2>
+        </section>
+        <section
+          data-auto-animate
+          data-background-image="images/tv-bg.svg"
+          data-background-size="cover"
+          data-background-repeat="no-repeat"
+        >
+          <h2 class="!text-xl !text-slate-500">Thank you thank you</h2>
+        </section>
+      </div>
+    </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      })
+    </script>
+  </body>
 </html>
