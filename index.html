@@ -127,47 +127,56 @@
         >
           <section><h2 class="r-fit-text">Examples</h2></section>
           <section>
-            <h2 class="!text-2xl !my-8"><strong>Example:</strong> Todo App</h2>
+						<div class="my-5 flex flex-col items-center">
+							<h2 class="!text-2xl !m-0"><strong>Example:</strong> Todo App</h2>
+							<a href="https://inrealtime-todo.vercel.app" target="_blank" class="!text-lg !m-0 !text-slate-500">inrealtime-todo.vercel.app</a>
+						</div>
             <div class="flex gap-5 r-stretch">
               <iframe
                 data-src="https://inrealtime-todo.vercel.app"
                 data-preload
-                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+                class="w-full rounded-md shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
               ></iframe>
               <iframe
                 data-src="https://inrealtime-todo.vercel.app"
                 data-preload
-                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+                class="w-full rounded-md shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
               ></iframe>
             </div>
           </section>
           <section>
-            <h2 class="!text-2xl !my-8"><strong>Example:</strong> Canvas</h2>
+						<div class="my-5 flex flex-col items-center">
+							<h2 class="!text-2xl !m-0"><strong>Example:</strong> Canvas Boxes</h2>
+							<a href="https://inrealtime-canvas.vercel.app" target="_blank" class="!text-lg !m-0 !text-slate-500">inrealtime-canvas.vercel.app</a>
+						</div>
             <div class="flex gap-5 r-stretch">
               <iframe
-                data-src="https://inrealtime-canvas-op5o9rrq9-slate-se.vercel.app"
+                data-src="https://inrealtime-canvas.vercel.app"
                 data-preload
-                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+                class="w-full rounded-md shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
               ></iframe>
               <iframe
-                data-src="https://inrealtime-canvas-op5o9rrq9-slate-se.vercel.app"
+                data-src="https://inrealtime-canvas.vercel.app"
                 data-preload
-                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+                class="w-full rounded-md shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
               ></iframe>
             </div>
           </section>
           <section>
-            <h2 class="!text-2xl !my-8"><strong>Example:</strong> Block Editor</h2>
+						<div class="my-5 flex flex-col items-center">
+							<h2 class="!text-2xl !m-0"><strong>Example:</strong> Block Editor</h2>
+							<a href="https://realtime-block-editor.vercel.app" target="_blank" class="!text-lg !m-0 !text-slate-500">realtime-block-editor.vercel.app</a>
+						</div>
             <div class="flex gap-5 r-stretch">
               <iframe
                 data-src="https://realtime-block-editor.vercel.app"
                 data-preload
-                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+                class="w-full rounded-md shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
               ></iframe>
               <iframe
                 data-src="https://realtime-block-editor.vercel.app"
                 data-preload
-                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+                class="w-full rounded-md shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
               ></iframe>
             </div>
           </section>
@@ -175,7 +184,7 @@
             <h2 class="!text-4xl">Read & write data</h2>
             <div class="h-3"></div>
             <pre>
-							<code data-trim data-line-numbers="3-4|6-12" class="language-tsx">
+							<code data-trim data-line-numbers="3-4|6-12" class="language-tsx rounded-md">
 								import { useStore, usePatch } from '@/realtime.config'
 
 								const todos = useStore((root) => root.todos)
@@ -215,16 +224,85 @@
             </h2>
           </section>
           <section>
+						<div class="w-full text-left">
+							<code class="!text-lg !text-slate-500">console</code>
+						</div>
             <pre>
-							<code data-trim class="language-powershell">
+							<code data-trim class="language-powershell rounded-md">
 								yarn add @inrealtime/react
 							</code>
 						</pre>
           </section>
           <section>
-            <h2 class="!text-xl !text-slate-500">Setup in code</h2>
+						<div class="w-full text-left">
+							<code class="!text-lg !text-slate-500">realtime.config.ts</code>
+						</div>
+            <pre class="r-stretch">
+							<code data-trim data-line-numbers="16,21-22,31" class="language-tsx rounded-md">
+								import { createRealtimeContext } from '@inrealtime/react'
+
+								type Document = {
+									items: {
+										label: string
+										checked?: boolean
+									}[]
+								}
+
+								type Presence = {
+									id: string
+									cursor?: { x: number; y: number }
+								}
+
+								export const {
+									RealtimeProvider,
+									useRealtimeContext,
+									useConnectionStatus,
+									usePresenceStatus,
+									useDocumentStatus,
+									useStore,
+									usePatch,
+									useSubscribe,
+									useCollaborators,
+									useSubscribeCollaborators,
+									useMe,
+									usePatchMe,
+									useSubscribeMe,
+									useBroadcast,
+									useBroadcastListener,
+								} = createRealtimeContext&#x003C;Document, Presence&#x003E;()
+							</code>
+						</pre>
           </section>
+					<section>
+						<div class="w-full text-left">
+							<code class="!text-lg !text-slate-500">App.tsx</code>
+						</div>
+						<pre class="r-stretch">
+							<code data-trim data-line-numbers="11-17" class="language-tsx rounded-md">
+								import { RealtimeProvider } from 'realtime.config'
+	
+								const getAuthToken = useCallback(async () => {
+									const accessTokenResponse = await getAuthTokenFromMyAPI()
+	
+									return (await accessTokenResponse.json()).token
+								}, [])
+	
+								const App = () => {
+									return (
+										&#x003C;RealtimeProvider
+											documentId="myDocument"
+											getAuthToken={getAuthToken}
+											publicAuthKey={process.env.REALTIME_PUBLIC_AUTH_KEY}
+										&#x003E;
+											{/* App content */}
+										&#x003C;/RealtimeProvider&#x003E;
+									)
+								}
+							</code>
+						</pre>
+					</section>
         </section>
+			</section>
         <section
           data-auto-animate
           data-background-image="images/tv-bg.svg"
@@ -232,8 +310,8 @@
           data-background-repeat="no-repeat"
         >
           <div class="flex flex-col items-center">
-            <h2 class="!text-3xl">And that's it!</h2>
-            <h3 class="!text-5xl"><em>Any questions?</em></h3>
+            <h2 class="!text-3xl">And that's it !</h2>
+            <h3 class="!text-5xl"><strong>Any questions ?</strong></h3>
             <div class="r-stretch">
               <img src="images/questions.jpg" />
             </div>
