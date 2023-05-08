@@ -52,7 +52,7 @@
           data-background-repeat="no-repeat"
         >
           <section>
-            <h2 class="r-text-fit">Collaboration 101</h2>
+            <h2 class="r-fit-text">Collaboration 101</h2>
           </section>
           <section>
             <div class="w-full flex justify-between items-end">
@@ -64,26 +64,59 @@
               <img src="images/figma.svg" width="100" />
               <img src="images/notion.svg" width="100" />
               <img src="images/google-docs.svg" width="100" />
+              <img src="images/slate-icon.svg" width="100" />
             </div>
+
+            <aside class="notes">
+              Users expect online web tools to be collaborative like Notion, Figma and Docs. We are
+              building an online web application at Slate, so we wanted realtime collaboration. We
+              searched the web and didn't find a single tool that fitted our needs and was simple to
+              use.
+            </aside>
           </section>
           <section>
-            <h2 class="!text-xl !text-slate-500">
-              Realtime was built because we needed a good product for Slate
-            </h2>
+            <div class="r-stretch">
+              <div class="r-stack w-full h-full flex justify-center">
+                <img class="fragment" src="images/scott-meme.jpg" width="640" />
+                <img class="fragment" src="images/jim-meme.jpg" width="540" />
+              </div>
+            </div>
+
+            <aside class="notes">
+              We found out that realtime solutions are hard to implement correctly, and there is no
+              "adding it later" without much time cost. So we decided we needed to create something
+              new from scratch and since we are already doing it, why not spend a little extra time
+              on it and make it reusable for anyone. After a lot of research and many many versions
+              and rewrites, a product was born that we are very proud of and that we think is going
+              to have a great impact on the implementation of realtime collaboration.
+            </aside>
           </section>
           <section>
-            <h2 class="!text-xl !text-slate-500">Who has worked with websockets?</h2>
-          </section>
-          <section>
-            <h2 class="!text-xl !text-slate-500">
-              It's hard to simply "Add realtime later on as a feature"
-            </h2>
-          </section>
-          <section>
-            <h2 class="!text-xl !text-slate-500">
-              CRDTs, Figma spent insane amount of time rewriting everything for their multiplayer
-              functionality
-            </h2>
+            <p class="r-fit-text">
+              Figma's
+              <a
+                href="https://www.figma.com/blog/how-figmas-multiplayer-technology-works/"
+                target="_blank"
+              >
+                blog post
+              </a>
+              on multiplayer functionality
+            </p>
+            <div class="w-full flex justify-center mt-8">
+              <video
+                data-autoplay
+                loop
+                width="400"
+                src="https://cdn.sanity.io/files/599r6htc/localized/74aa5f68d0393aec0399e321101a9412c0828ea0.mp4"
+              ></video>
+            </div>
+
+            <aside class="notes">
+              Now like I said earlier, there's a lot to cover when it comes to the tech behind
+              realtime functionality, OTs, CRDTs and so on, but we can go into those details later.
+              For now I will just point to this articel from Figma about their multiplayer
+              functionality.
+            </aside>
           </section>
         </section>
         <section
@@ -92,7 +125,7 @@
           data-background-size="cover"
           data-background-repeat="no-repeat"
         >
-          <section><h2 class="r-text-fit">Examples</h2></section>
+          <section><h2 class="r-fit-text">Examples</h2></section>
           <section>
             <h2 class="!text-2xl !my-8"><strong>Example:</strong> Todo App</h2>
             <div class="flex gap-5 r-stretch">
@@ -103,6 +136,21 @@
               ></iframe>
               <iframe
                 data-src="https://inrealtime-todo.vercel.app"
+                data-preload
+                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+              ></iframe>
+            </div>
+          </section>
+          <section>
+            <h2 class="!text-2xl !my-8"><strong>Example:</strong> Canvas</h2>
+            <div class="flex gap-5 r-stretch">
+              <iframe
+                data-src="https://"
+                data-preload
+                class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
+              ></iframe>
+              <iframe
+                data-src="https://"
                 data-preload
                 class="w-full shadow-[0_16px_40px_rgba(236,72,153,0.4)]"
               ></iframe>
@@ -124,7 +172,8 @@
             </div>
           </section>
           <section>
-            <h2 class="!text-2xl">Read & write data</h2>
+            <h2 class="!text-4xl">Read & write data</h2>
+            <div class="h-3"></div>
             <pre>
 							<code data-trim data-line-numbers="3-4|6-12" class="language-tsx">
 								import { useStore, usePatch } from '@/realtime.config'
@@ -150,7 +199,7 @@
           data-background-repeat="no-repeat"
         >
           <section>
-            <h2 class="r-text-fit">How to realtime</h2>
+            <h2 class="r-fit-text">How to realtime</h2>
           </section>
           <section>
             <h2 class="r-fit-text">
@@ -182,15 +231,13 @@
           data-background-size="cover"
           data-background-repeat="no-repeat"
         >
-          <h2 class="!text-xl !text-slate-500">Questions and tech?</h2>
-        </section>
-        <section
-          data-auto-animate
-          data-background-image="images/tv-bg.svg"
-          data-background-size="cover"
-          data-background-repeat="no-repeat"
-        >
-          <h2 class="!text-xl !text-slate-500">Thank you thank you</h2>
+          <div class="flex flex-col items-center">
+            <h2 class="!text-3xl">And that's it!</h2>
+            <h3 class="!text-5xl"><em>Any questions?</em></h3>
+            <div class="r-stretch">
+              <img src="images/questions.jpg" />
+            </div>
+          </div>
         </section>
       </div>
     </div>
