@@ -25,7 +25,6 @@
     <div class="reveal">
       <div class="slides">
         <section
-          data-auto-animate
           data-background-image="images/tv-bg.svg"
           data-background-size="cover"
           data-background-repeat="no-repeat"
@@ -46,7 +45,6 @@
         </section>
 
         <section
-          data-auto-animate
           data-background-image="images/tv-bg.svg"
           data-background-size="cover"
           data-background-repeat="no-repeat"
@@ -120,7 +118,6 @@
           </section>
         </section>
         <section
-          data-auto-animate
           data-background-image="images/tv-bg.svg"
           data-background-size="cover"
           data-background-repeat="no-repeat"
@@ -217,7 +214,6 @@
           </section>
         </section>
         <section
-          data-auto-animate
           data-background-image="images/tv-bg.svg"
           data-background-size="cover"
           data-background-repeat="no-repeat"
@@ -225,48 +221,38 @@
           <section>
             <h2 class="r-fit-text">How to realtime</h2>
           </section>
-          <section>
+          <section data-auto-animate>
+            <h3 class="!text-5xl !text-slate-500">Getting started</h3>
             <h2 class="r-fit-text">
-              Web app: <a href="https://inrealtime.app/" target="_blank">inrealtime.app</a>
+              Create an
+              <a href="https://inrealtime.app/" target="_blank">inrealtime.app</a>
+              project
             </h2>
           </section>
-          <section>
+          <section data-auto-animate>
+            <h3 class="!text-5xl !text-slate-500">Getting started</h3>
             <h2 class="r-fit-text">
-              Npm pack:
+              Install the
               <a href="https://www.npmjs.com/package/@inrealtime/react" target="_blank"
                 >@inrealtime/react</a
               >
+              package
             </h2>
-          </section>
-          <section>
-            <div class="w-full text-left">
-              <code class="!text-lg !text-slate-500">console</code>
-            </div>
             <pre>
 							<code data-trim class="language-powershell rounded-md">
 								yarn add @inrealtime/react
 							</code>
 						</pre>
           </section>
-          <section>
-            <div class="w-full text-left">
-              <code class="!text-lg !text-slate-500">realtime.config.ts</code>
-            </div>
+          <section data-auto-animate>
+            <h3 class="!text-3xl !text-slate-500">Getting started</h3>
+            <h2 class="!text-5xl">Setup a <strong>realtime.config.ts</strong> file</h2>
             <pre class="r-stretch">
-							<code data-trim data-line-numbers="16,21-22,31" class="language-tsx rounded-md">
+							<code data-trim data-line-numbers="7,12-13,22" class="language-tsx rounded-md">
 								import { createRealtimeContext } from '@inrealtime/react'
 
-								type Document = {
-									items: {
-										label: string
-										checked?: boolean
-									}[]
-								}
-
-								type Presence = {
-									id: string
-									cursor?: { x: number; y: number }
-								}
+								type Document = { items: TodoItem[] }
+								type Presence = { cursor: { x: number; y: number } }
 
 								export const {
 									RealtimeProvider,
@@ -288,10 +274,11 @@
 							</code>
 						</pre>
           </section>
-          <section>
-            <div class="w-full text-left">
-              <code class="!text-lg !text-slate-500">App.tsx</code>
-            </div>
+          <section data-auto-animate>
+            <h3 class="!text-3xl !text-slate-500">Getting started</h3>
+            <h2 class="!text-5xl">
+              Wrap in <strong>RealtimeProvider</strong> & add <strong>Auth Key</strong>
+            </h2>
             <pre class="r-stretch">
 							<code data-trim data-line-numbers="11-17" class="language-tsx rounded-md">
 								import { RealtimeProvider } from 'realtime.config'
@@ -316,9 +303,23 @@
 							</code>
 						</pre>
           </section>
+          <section data-auto-animate>
+            <h3 class="!text-3xl !text-slate-500">Usage</h3>
+            <h2 class="!text-5xl">Status</h2>
+          </section>
+          <section data-auto-animate>
+            <h3 class="!text-3xl !text-slate-500">Usage</h3>
+            <h2 class="!text-5xl">Data</h2>
+          </section>
+          <section data-auto-animate>
+            <h3 class="!text-3xl !text-slate-500">Usage</h3>
+            <h2 class="!text-5xl">Presence</h2>
+          </section>
+          <section>
+            <img src="images/summary.png" class="r-stretch" />
+          </section>
         </section>
         <section
-          data-auto-animate
           data-background-image="images/tv-bg.svg"
           data-background-size="cover"
           data-background-repeat="no-repeat"
