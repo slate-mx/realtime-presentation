@@ -335,7 +335,7 @@ import { ... } from 'realtime.config'
 const connectionStatus = useConnectionStatus()
                 
 // Unready | Ready
-const documentStatus = usePresenceStatus()
+const presenceStatus = usePresenceStatus()
 
 // Unready | Ready
 const documentStatus = useDocumentStatus()
@@ -348,7 +348,7 @@ const documentStatus = useDocumentStatus()
             <h3 class="!text-3xl !text-slate-500 !mb-1.5">Usage</h3>
             <h2 class="!text-5xl">Data</h2>
             <pre>
-							<code data-trim data-line-numbers="3-4|6-16|18-29|31-39" class="language-tsx rounded-md">
+							<code data-trim data-line-numbers="3-4|6-16|18-29" class="language-tsx rounded-md">
 import { ... } from 'realtime.config'
 
 const title = useStore((root) => root.title)
@@ -378,16 +378,6 @@ const removeItem = () => {
     parent.properties.splice(propertyIndex, 1)
   })
 }
-
-const onChange = useCallback((e) => {
-  patch((root) => {
-    const nodeData = root.metadata.http.nodes.find((n) => n.id === nodeId).data
-
-    if (nodeData) {
-      nodeData.path = e.target.value
-    }
-  })
-}, [patch, nodeId])
 							</code>
 						</pre>
 
