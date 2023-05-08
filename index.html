@@ -44,7 +44,14 @@
             </div>
           </div>
 
-          <aside class="notes">TODO: NOTES</aside>
+          <aside class="notes">
+            <ul>
+              <li>Hello and welcome, I'm Birkir, co-founder of Slate, located here at Aranja.</li>
+              <li>We have been working for 3 years on Slate</li>
+              <li>Dabbled in Realtime since we wanted our product to be in realtime</li>
+              <li>Introducing our first product Realtime, hopefilly can help some of you</li>
+            </ul>
+          </aside>
         </section>
 
         <section
@@ -69,10 +76,19 @@
             </div>
 
             <aside class="notes">
-              Users expect online web tools to be collaborative like Notion, Figma and Docs. We are
-              building an online web application at Slate, so we wanted realtime collaboration. We
-              searched the web and didn't find a single tool that fitted our needs and was simple to
-              use.
+              <ul>
+                <li>
+                  Users expect online web tools to be collaborative like Notion, Figma and Docs.
+                </li>
+                <li>
+                  We are building an online web application at Slate, so we wanted realtime
+                  collaboration.
+                </li>
+                <li>
+                  We searched the web and didn't find a single tool that fitted our needs and was
+                  simple to use.
+                </li>
+              </ul>
             </aside>
           </section>
           <section>
@@ -84,12 +100,20 @@
             </div>
 
             <aside class="notes">
-              We found out that realtime solutions are hard to implement correctly, and there is no
-              "adding it later" without much time cost. So we decided we needed to create something
-              new from scratch and since we are already doing it, why not spend a little extra time
-              on it and make it reusable for anyone. After a lot of research and many many versions
-              and rewrites, a product was born that we are very proud of and that we think is going
-              to have a great impact on the implementation of realtime collaboration.
+              <ul>
+                <li>We found out that realtime solutions are hard to implement correctly</li>
+                <li>No adding it later" without much time cost.</li>
+                <li>
+                  So we decided we needed to create something new from scratch and since we are
+                  already doing it, why not spend a little extra time on it and make it reusable for
+                  anyone.
+                </li>
+                <li>
+                  After a lot of research and many many versions and rewrites, a product was born
+                  that we are very proud of and that we think is going to have a great impact on the
+                  implementation of realtime collaboration.
+                </li>
+              </ul>
             </aside>
           </section>
           <section>
@@ -113,10 +137,17 @@
             </div>
 
             <aside class="notes">
-              Now like I said earlier, there's a lot to cover when it comes to the tech behind
-              realtime functionality, OTs, CRDTs and so on, but we can go into those details later.
-              For now I will just point to this articel from Figma about their multiplayer
-              functionality.
+              <ul>
+                <li>
+                  Now like I said earlier, there's a lot to cover when it comes to the tech behind
+                  realtime functionality, OTs, CRDTs and so on, but we can go into those details
+                  later.
+                </li>
+                <li>
+                  For now I will just point to this articel from Figma about their multiplayer
+                  functionality.
+                </li>
+              </ul>
             </aside>
           </section>
         </section>
@@ -151,7 +182,11 @@
               ></iframe>
             </div>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <div class="my-5 flex flex-col items-center">
@@ -176,7 +211,11 @@
               ></iframe>
             </div>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <div class="my-5 flex flex-col items-center">
@@ -201,29 +240,37 @@
               ></iframe>
             </div>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h2 class="!text-4xl">Read & write data</h2>
             <div class="h-3"></div>
             <pre>
 							<code data-trim data-line-numbers="3-4|6-12" class="language-tsx rounded-md">
-								import { useStore, usePatch } from '@/realtime.config'
+import { useStore, usePatch } from '@/realtime.config'
 
-								const todos = useStore((root) => root.todos)
-								// [{ label: 'Find out what "goon" means', checked: false }]
+const todos = useStore((root) => root.todos)
+// [{ label: 'Find out what "goon" means', checked: false }]
 
-								const patch = usePatch()
+const patch = usePatch()
 
-								patch((root) => {
-									root.todos.push({
-										label: 'Take the cat out for a walk',
-									})
-								})
+patch((root) => {
+  root.todos.push({
+    label: 'Take the cat out for a walk',
+  })
+})
 							</code>
 						</pre>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section
@@ -235,17 +282,21 @@
             <h2 class="r-fit-text">How to realtime</h2>
           </section>
           <section data-auto-animate>
-            <h3 class="!text-5xl !text-slate-500">Getting started</h3>
+            <h3 class="!text-5xl !text-slate-500 !mb-1.5">Getting started</h3>
             <h2 class="r-fit-text">
               Create an
               <a href="https://inrealtime.app/" target="_blank">inrealtime.app</a>
               project
             </h2>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section data-auto-animate>
-            <h3 class="!text-5xl !text-slate-500">Getting started</h3>
+            <h3 class="!text-5xl !text-slate-500 !mb-1.5">Getting started</h3>
             <h2 class="r-fit-text">
               Install the
               <a href="https://www.npmjs.com/package/@inrealtime/react" target="_blank"
@@ -259,70 +310,82 @@
 							</code>
 						</pre>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3 class="!text-3xl !text-slate-500">Getting started</h3>
             <h2 class="!text-5xl">Setup a <strong>realtime.config.ts</strong> file</h2>
-            <pre class="r-stretch">
-							<code data-trim data-line-numbers="7,12-13,22" class="language-tsx rounded-md">
-								import { createRealtimeContext } from '@inrealtime/react'
+            <pre>
+							<code data-trim data-line-numbers="1|19-22" class="language-tsx rounded-md">
+import { createRealtimeContext } from '@inrealtime/react'
 
-								type Document = { items: TodoItem[] }
-								type Presence = { cursor: { x: number; y: number } }
+type Document = { items: TodoItem[] }
+type Presence = { cursor: { x: number; y: number } }
 
-								export const {
-									RealtimeProvider,
-									useRealtimeContext,
-									useConnectionStatus,
-									usePresenceStatus,
-									useDocumentStatus,
-									useStore,
-									usePatch,
-									useSubscribe,
-									useCollaborators,
-									useSubscribeCollaborators,
-									useMe,
-									usePatchMe,
-									useSubscribeMe,
-									useBroadcast,
-									useBroadcastListener,
-								} = createRealtimeContext&#x003C;Document, Presence&#x003E;()
+export const {
+  useRealtimeContext,
+  useConnectionStatus,
+  usePresenceStatus,
+  useDocumentStatus,
+  useSubscribe,
+  useCollaborators,
+  useSubscribeCollaborators,
+  useMe,
+  usePatchMe,
+  useSubscribeMe,
+  useBroadcast,
+  useBroadcastListener,
+  useStore,
+  usePatch,
+  RealtimeProvider,
+} = createRealtimeContext&#x003C;Document, Presence&#x003E;()
 							</code>
 						</pre>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3 class="!text-3xl !text-slate-500">Getting started</h3>
             <h2 class="!text-5xl">
               Wrap in <strong>RealtimeProvider</strong> & add <strong>Auth Key</strong>
             </h2>
-            <pre class="r-stretch">
-							<code data-trim data-line-numbers="11-17" class="language-tsx rounded-md">
-								import { RealtimeProvider } from 'realtime.config'
-	
-								const getAuthToken = useCallback(async () => {
-									const accessTokenResponse = await getAuthTokenFromMyAPI()
-	
-									return (await accessTokenResponse.json()).token
-								}, [])
-	
-								const App = () => {
-									return (
-										&#x003C;RealtimeProvider
-											documentId="myDocument"
-											getAuthToken={getAuthToken}
-											publicAuthKey={process.env.REALTIME_PUBLIC_AUTH_KEY}
-										&#x003E;
-											{/* App content */}
-										&#x003C;/RealtimeProvider&#x003E;
-									)
-								}
+            <pre>
+							<code data-trim data-line-numbers="11-13,15,17" class="language-tsx rounded-md">
+import { RealtimeProvider } from 'realtime.config'
+
+const getAuthToken = useCallback(async () => {
+  const accessTokenResponse = await getAuthTokenFromMyAPI()
+
+  return (await accessTokenResponse.json()).token
+}, [])
+
+const App = () => {
+  return (
+    &#x003C;RealtimeProvider
+      documentId="myDocumentId"
+      publicAuthKey={REALTIME_PUBLIC_AUTH_KEY}
+      getAuthToken={getAuthToken}
+    &#x003E;
+      {/* App content */}
+    &#x003C;/RealtimeProvider&#x003E;
+  )
+}
 							</code>
 						</pre>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3 class="!text-3xl !text-slate-500 !mb-1.5">Usage</h3>
@@ -342,7 +405,11 @@ const documentStatus = useDocumentStatus()
 							</code>
 						</pre>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3 class="!text-3xl !text-slate-500 !mb-1.5">Usage</h3>
@@ -381,17 +448,20 @@ const removeItem = () => {
 							</code>
 						</pre>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section data-auto-animate>
             <h3 class="!text-3xl !text-slate-500 !mb-1.5">Usage</h3>
             <h2 class="!text-5xl">Presence</h2>
             <pre>
-							<code data-trim data-line-numbers="3-18|20-26" class="language-tsx rounded-md">
+							<code data-trim data-line-numbers="3-17|19|21-25" class="language-tsx rounded-md">
 import { ... } from 'realtime.config'
 
-const Cursors = () => {
-  // Can also use a selector here
+const CursorsExample = () => {
   const collaborators = useCollaborators()
 
   return (
@@ -407,22 +477,30 @@ const Cursors = () => {
   )
 }
 
-const myName = useMe((me) => me.metadata?.name)
+const myName = useMe((me) => me.name)
 
 const patchMe = usePatchMe()
 
-const changeColor = (color: string) => {
-  patchMe({ color })
+const onChangeName = (name: string) => {
+  patchMe({ name })
 }
 							</code>
 						</pre>
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
           <section data-transition="zoom">
             <img src="images/summary.png" class="r-stretch" />
 
-            <aside class="notes">TODO: NOTES</aside>
+            <aside class="notes">
+              <ul>
+                <li>TODO: NOTES</li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section
@@ -438,6 +516,12 @@ const changeColor = (color: string) => {
               <img src="images/questions.jpg" />
             </div>
           </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Thank you kindly</li>
+            </ul>
+          </aside>
         </section>
       </div>
     </div>
