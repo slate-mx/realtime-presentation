@@ -284,7 +284,7 @@ export const {
               Wrap in <strong>RealtimeProvider</strong> & add <strong>Auth Key</strong>
             </h2>
             <pre>
-							<code data-trim data-line-numbers="11-13,15,17" class="language-tsx rounded-md">
+							<code data-trim data-line-numbers="11-13,15,17|3-7,14" class="language-tsx rounded-md">
 import { RealtimeProvider } from 'realtime.config'
 
 const getAuthToken = useCallback(async () => {
@@ -336,7 +336,7 @@ const documentStatus = useDocumentStatus()
               <strong>useStore() & usePatch()</strong>
             </span>
             <pre>
-							<code data-trim data-line-numbers="3-7|9,12-16|22-30" class="language-tsx rounded-md">
+							<code data-trim data-line-numbers="3-7|9,12-18|22-31" class="language-tsx rounded-md">
 import { ... } from 'realtime.config'
 
 const title = useStore((root) => root.title)
