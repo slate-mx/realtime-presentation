@@ -13,21 +13,6 @@ html * {
   rendering-intent: auto;
 }
 
-body:after {
-  content: "";
-  position: fixed;
-  display: block;
-  bottom: 1.5em;
-  left: 1em;
-  width: 8%;
-  min-width: 80px;
-  aspect-ratio: 16/9;
-  background-image: url(https://slate-se.github.io/realtime-presentation/images/slate-logo.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #020617;
 }

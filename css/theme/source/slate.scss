@@ -22,20 +22,20 @@ html * {
   rendering-intent: auto;
 }
 
-body:after {
-  content: '';
-  position: fixed;
-  display: block;
-  bottom: 1.5em;
-  left: 1em;
-  width: 8%;
-  min-width: 80px;
-  aspect-ratio: 16/9;
-  background-image: url(https://slate-se.github.io/realtime-presentation/images/slate-logo.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+// body:after {
+//   content: '';
+//   position: fixed;
+//   display: block;
+//   bottom: 1.5em;
+//   left: 1em;
+//   width: 8%;
+//   min-width: 80px;
+//   aspect-ratio: 16/9;
+//   background-image: url(https://slate-se.github.io/realtime-presentation/images/slate-logo.svg);
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
 
 $background: #020617;
 $foreground: #f8fafc;
