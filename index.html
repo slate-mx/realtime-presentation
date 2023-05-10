@@ -135,7 +135,7 @@
               <a
                 href="https://realtime-examples-todo.vercel.app"
                 target="_blank"
-                class="!text-lg !m-0 !text-slate-500"
+                class="!text-xl !m-0 !text-slate-300 !underline"
                 >realtime-examples-todo.vercel.app</a
               >
             </div>
@@ -160,7 +160,7 @@
               <a
                 href="https://realtime-examples-canvas.vercel.app"
                 target="_blank"
-                class="!text-lg !m-0 !text-slate-500"
+                class="!text-xl !m-0 !text-slate-300 !underline"
                 >realtime-examples-canvas.vercel.app</a
               >
             </div>
@@ -185,7 +185,7 @@
               <a
                 href="https://realtime-examples-block-editor.vercel.app"
                 target="_blank"
-                class="!text-lg !m-0 !text-slate-500"
+                class="!text-xl !m-0 !text-slate-300 !underline"
                 >realtime-examples-block-editor.vercel.app</a
               >
             </div>
@@ -380,7 +380,7 @@ const Cursors = () => {
 }
 
 const Profile = () => {
-  const myName = useMe((me) => me.name)
+  const myName = useMe((me) => me.data.name)
 
   const patchMe = usePatchMe()
 
