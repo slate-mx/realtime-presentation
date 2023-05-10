@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>Slate presentation</title>
+    <title>Realtime</title>
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
@@ -30,13 +30,22 @@
           data-background-size="cover"
           data-background-repeat="no-repeat"
         >
-          <div class="flex justify-center">
+          <div class="fixed top-0 bottom-0 left-0 right-0 -z-10 opacity-100">
+            <iframe
+              class="w-full h-full rounded-md"
+              data-src="https://my.spline.design/untitled-a151ef718e67c82593102b32c8fe13a4/"
+              data-preload
+            ></iframe>
+
+            <div class="absolute bottom-9 right-16 h-12 w-40 bg-slate-950 rounded-md"></div>
+          </div>
+          <div class="flex justify-center pointer-events-none">
             <img src="images/realtime-logo.svg" width="540" />
           </div>
-          <h1 class="!text-3xl italic">realtime collaboration with ease</h1>
-          <div class="w-full flex items-center justify-center gap-4 mt-16">
+          <h1 class="!text-3xl italic pointer-events-none">realtime collaboration with ease</h1>
+          <div class="w-full flex items-center justify-center gap-4 mt-16 pointer-events-none">
             <div
-              class="h-16 w-16 rounded-full overflow-hidden bg-[url('images/birkir.png')] bg-cover bg-center ring-2 ring-slate-500 ring-offset-2 ring-offset-slate-950"
+              class="h-16 w-16 rounded-full overflow-hidden bg-[url('images/birkir.png')] bg-cover bg-center ring-2 ring-slate-800 ring-offset-2 ring-offset-slate-950"
             ></div>
             <div class="text-xl text-slate-500 flex flex-col items-start gap-0.5">
               <span class="font-bold">👋 Birkir Örn Karlsson</span>
@@ -190,14 +199,21 @@
             <h2 class="!text-5xl">
               Simple <span class="text-slate-500">yet very powerful</span> hooks
             </h2>
+            <div>
+              <code class="!text-slate-500 text-2xl">
+                { typeof <span class="text-pink-500">YourData</span> ==
+                <span class="text-emerald-500">JSON</span> ? ✅(🔥) : ❎ }
+              </code>
+            </div>
             <div class="h-3"></div>
             <pre>
-							<code data-trim data-line-numbers="3-4|6-12" class="language-tsx rounded-md">
-import { useStore, usePatch } from '@/realtime.config'
-
-const todos = useStore((root) => root.todos)
+							<code data-trim data-line-numbers="2" class="language-tsx rounded-md">
 // [{ label: 'Find out what "goon" means', checked: false }]
-
+const todos = useStore((root) => root.todos)
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-line-numbers="3-7" class="language-tsx rounded-md">
 const patch = usePatch()
 
 patch((root) => {
