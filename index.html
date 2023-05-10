@@ -355,51 +355,6 @@ const documentStatus = useDocumentStatus()
           </section>
           <section data-auto-animate>
             <h3 class="!text-3xl !text-slate-500 !mb-1.5">Usage</h3>
-            <h2 class="!text-5xl !mb-1.5">Data</h2>
-            <span class="!font-mono !text-xl">
-              <strong>useStore() & usePatch()</strong>
-            </span>
-            <pre>
-							<code data-trim data-line-numbers="3-7|9,12-18|22-31" class="language-tsx rounded-md">
-import { ... } from 'realtime.config'
-
-const title = useStore((root) => root.title)
-
-const incompletedItems = useStore((root) => {
-  return root.items?.filter((item) => !item.isCompleted))
-})
-
-const patch = usePatch()
-
-const addItem = () => {
-  patch((root) => {
-    root.items.push({
-      id: uuidv4(),
-      title: workingTitle,
-      isComplete: false,
-    })
-  })
-}
-
-const removeItem = () => {
-  patch((root) => {
-   const found = findProperty(root)
-    if (!found) {
-      return
-    }
-
-    const { property: foundProperty, parent } = found
-    const propertyIndex = parent.properties.indexOf(foundProperty)
-    parent.properties.splice(propertyIndex, 1)
-  })
-}
-							</code>
-						</pre>
-
-            <aside class="notes"></aside>
-          </section>
-          <section data-auto-animate>
-            <h3 class="!text-3xl !text-slate-500 !mb-1.5">Usage</h3>
             <h2 class="!text-5xl !mb-0.5">Presence</h2>
             <span class="!font-mono !text-xl">
               <strong>useCollaborators(), useMe() & usePatchMe()</strong>
@@ -439,6 +394,51 @@ const Profile = () => {
       onChange={(e) =&#x003E; onChangeName(e.target.value)}
     /&#x003E;
   )
+}
+							</code>
+						</pre>
+
+            <aside class="notes"></aside>
+          </section>
+          <section data-auto-animate>
+            <h3 class="!text-3xl !text-slate-500 !mb-1.5">Usage</h3>
+            <h2 class="!text-5xl !mb-1.5">Data</h2>
+            <span class="!font-mono !text-xl">
+              <strong>useStore() & usePatch()</strong>
+            </span>
+            <pre>
+							<code data-trim data-line-numbers="3-7|9,12-18|22-31" class="language-tsx rounded-md">
+import { ... } from 'realtime.config'
+
+const title = useStore((root) => root.title)
+
+const incompletedItems = useStore((root) => {
+  return root.items?.filter((item) => !item.isCompleted))
+})
+
+const patch = usePatch()
+
+const addItem = () => {
+  patch((root) => {
+    root.items.push({
+      id: uuidv4(),
+      title: workingTitle,
+      isComplete: false,
+    })
+  })
+}
+
+const removeItem = () => {
+  patch((root) => {
+   const found = findProperty(root)
+    if (!found) {
+      return
+    }
+
+    const { property: foundProperty, parent } = found
+    const propertyIndex = parent.properties.indexOf(foundProperty)
+    parent.properties.splice(propertyIndex, 1)
+  })
 }
 							</code>
 						</pre>
